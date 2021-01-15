@@ -60,7 +60,7 @@ function afficherResultat(msg){
     },50);
     setTimeout(function(){
         clearInterval(compteur)
-    },2000)
+    },2000)*/
 }
 
 function prevoir(){
