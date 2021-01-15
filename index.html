@@ -3,12 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Seance2</title>
 </head>
-<body>
-    <input type="number" name="" id="champ">
-    <input type="button" value="Envoyer" id="envoyer">
-    <p id="titre"></p>
+<body class="flexbox">
+    <div id="gameboard" class="flexbox mybox">
+        <div id="notif" class="flexbox mybox">
+            <h3></h3>
+        </div>
+        <div id="playboard" class="flexbox">
+            <h1 id="title">Il vous reste 10 essais</h1>
+            <input type="number" name="" id="champ">
+            <p id="titre"></p>
+        </div>
+    </div>
 </body>
 <script src="app.js" type="text/javascript"></script>
 </html>

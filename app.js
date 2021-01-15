@@ -5,21 +5,24 @@ var gagne = false;
 
 console.log(nb)
 
-document.getElementById('envoyer').addEventListener('click',function(){
-    suggestion = document.getElementById('champ').value;/*lecture*/
-    if(essais>0){
-        if(suggestion<=100 && suggestion>=1){
-            if(!gagne){
-                prevoir();
-                essais--;
-                console.log(essais)
+document.querySelector('#champ').addEventListener('keypress',function(ev){
+    console.log(ev.key)
+    if(ev.key==="Enter"){
+        suggestion = document.getElementById('champ').value;/*lecture*/
+            if(essais>0){
+                if(suggestion<=100 && suggestion>=1){
+                    if(!gagne){
+                        prevoir();
+                        essais--;
+                        document.querySelector("#title").innerText = `Il vous reste ${essais} essais`;
+                    }
+                }
+                else document.getElementById('titre').innerHTML = "L'entier voulu est compris entre 1 et 100";
+            } else {
+                document.getElementById('titre').innerHTML = "Perdu!!";
             }
         }
-        else document.getElementById('titre').innerHTML = "L'entier voulu est compris entre 1 et 100";
-    } else {
-        document.getElementById('titre').innerHTML = "Perdu!!";
-    }
-});
+})
 
 function prevoir(){
     if(nb>suggestion){
