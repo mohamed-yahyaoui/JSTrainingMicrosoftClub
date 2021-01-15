@@ -7,7 +7,7 @@ var compteur;
 console.log(nb)
 
 document.querySelector('#guess').addEventListener('keypress',function(ev){
-    console.log(ev.key)
+    //console.log(ev.key)
     if(ev.key==="Enter"){
         suggestion = document.getElementById('guess').value;/*lecture*/
             if(essais>0){
@@ -46,6 +46,13 @@ function afficherResultat(msg){
     document.getElementById('titre').innerHTML = msg;
     let op = 1;
     compteur = setInterval(function(){
+        if(op<=0){
+            clearInterval(timer);
+        }
+        op -= 0.025
+        document.getElementById("notif").style.opacity = op;
+    },50);
+    /*compteur = setInterval(function(){
         if(op>=0){
             op -= 0.025
             document.getElementById("notif").style.opacity = op;
