@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Seance2</title>
+    <title>Seance3</title>
 </head>
 <body class="flexbox">
+    <div id="notif" class="flexbox mybox">
+        <h3 id="titre"></h3>
+    </div>
+    <br/>
     <div id="gameboard" class="flexbox mybox">
-        <div id="notif" class="flexbox mybox">
-            <h3></h3>
-        </div>
         <div id="playboard" class="flexbox">
             <h1 id="title">Il vous reste 10 essais</h1>
-            <input type="number" name="" id="champ">
-            <p id="titre"></p>
+            <input type="number" id="guess">
+        </div>
+        <div id="repeter" class="flexbox" style='display:none'>
+            <h1>Voulez-vous répèter??</h1>
+            <input type="button" class="nextbutton" value="Allez!" onclick="location.replace('')">
         </div>
     </div>
 </body>
